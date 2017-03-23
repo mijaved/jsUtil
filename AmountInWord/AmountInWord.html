@@ -8,26 +8,23 @@
 </head>
 <body>
     <input type="text" id="txtAmt" value="112235621" />
-    <button onclick="calc()">In Words</button>
-    <br /><label id="lblWordEn" style="color:red"></label>
+    <button onclick="showInWords()">Show</button>
+
+    <br /><label id="lblInWordsEn" style="color:red"></label>
     <br />
-    <br /><label id="lblWordBn" style="color:red"></label>
+    <br /><label id="lblInWordsBn" style="color:red"></label>
 
 
     <script type="text/javascript" src="amountInWord_en.js"></script>
     <script type="text/javascript" src="amountInWord_bn.js"></script>
     <script type="text/javascript">
-        function calc() {
-            var a = document.getElementById("txtAmt").value;
-            var b = inWords(a);
-            var c = inWordsBn(a);
-            //alert(b);
+        function showInWords() {
+            var amt = document.getElementById("txtAmt").value;
 
-            document.getElementById("lblWordEn").innerHTML = b;
-            document.getElementById("lblWordBn").innerHTML = c;
+            document.getElementById("lblInWordsEn").innerHTML = inWordsEn(amt);
+            document.getElementById("lblInWordsBn").innerHTML = inWordsBn(amt);
         }
     </script>
-
 
 </body>
 </html>
