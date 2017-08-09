@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title> Hello Vuejs </title>
+    <!-- <script src="https://unpkg.com/vue@2.4.2"></script> -->
+    <!-- <script src="https://unpkg.com/vue"></script> -->
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+	ref: <a href="https://vuejs.org/v2/guide/" target="_blank">vuejs.org/v2/guide</a>
+    
+	<div id="app">
+        <p>{{ message }}</p>
+    </div>
+    
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue.js!'
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title> Hello World from Vuejs </title>
+    <!-- <script src="https://unpkg.com/vue@2.4.2"></script> -->
+    <!-- <script src="https://unpkg.com/vue"></script> -->
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+
+     <div><h4>Traditional way of Databinding</h4>
+        <input type="text" id="text1">
+        <script>
+            let data = {
+                message: "Hello World from js!"
+            };
+            //document.querySelector('#text1').value = data.message;
+            document.getElementById('text1').value = data.message;
+        </script>
+    </div> 
+
+     <div id="VueApp"><h4>Vuejs way of Databinding</h4>
+        <input type="text" id="text2" v-model="message">
+        <p>The input value is: {{ message }}</p>
+        <script>
+            let dataModel = {
+                message: "Hello World from vuejs!"
+            };
+            
+            new Vue({
+                el: '#VueApp',
+                data: dataModel
+            });
+        </script>
+    </div> 
+
+</body>
+
+</html>
